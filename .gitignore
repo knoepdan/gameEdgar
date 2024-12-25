@@ -1,6 +1,5 @@
 # to exclude
 /node_modules/*
 /build/*
-/dist/*
 /distLocal/*
 
