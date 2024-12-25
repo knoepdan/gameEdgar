@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "vite --base /EdisGame",
+    "buildAzure": "tsc && vite build --base /",
     "build": "tsc && vite build --base /EdisGame",
     "copyToLocal": "xcopy .\\dist distLocal /s /i /y",
     "preview": "vite preview"
