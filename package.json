@@ -8,7 +8,7 @@
     "npm": ">=8"
   },
   "scripts": {
-    "dev": "vite --base /EdisGame",
+    "dev": "vite --base /",
     "buildAzure": "tsc && vite build --base /",
     "build": "tsc && vite build --base /EdisGame",
     "copyToLocal": "xcopy .\\dist distLocal /s /i /y",
