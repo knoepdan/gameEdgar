@@ -1,0 +1,5 @@
+
+
+
+### convert png files to cur files (for cursor)
+https://convertio.co/de/png-cur/
