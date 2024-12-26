@@ -1,7 +1,12 @@
 
 
 ## azure infos
+
+https://portal.azure.com/#home
+
 EdgarsGame
+
+
 
 ## Production
 https://thankful-wave-0cf92cb1e.4.azurestaticapps.net/
