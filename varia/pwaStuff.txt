@@ -13,6 +13,15 @@ https://developer.mozilla.org/de/docs/Web/Manifest
 
 https://www.appicon.co/  -> to generate icons
 
+
+## service worker and typescript
+
+See: https://joshuatz.com/posts/2021/strongly-typed-service-workers/
+or see subfolder /pwaExampleCodeTS   
+
+-> as of now.. easier to just use js file (but we need to update its content each time :-()
+
+
 ## Other
 
 

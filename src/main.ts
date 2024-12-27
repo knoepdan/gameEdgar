@@ -2,6 +2,11 @@ import GameComponent from "./gameComponent.js";
 import TileComponent from "./tileComponent.js";
 import StackComponent from "./stackComponent.js";
 
+interface IGameInfo {
+  type?: string;
+  imageSrc?: string;
+}
+
 const init = () => {
   const componentContainer = getComponentContainer();
   GameComponent.logMe();
@@ -13,10 +18,14 @@ const init = () => {
   document.getElementById("tile-container")?.append(...tiles);
 
   // start audio (will only work if user interacts with the page.. so initially no music)
-  const audio = document.getElementById("my-audio") as HTMLAudioElement;
-  audio.playbackRate = 2.0;
-  audio.muted = false;
-  audio.play();
+  try {
+    const audio = document.getElementById("my-audio") as HTMLAudioElement;
+    audio.playbackRate = 2.0;
+    audio.muted = false;
+    audio.play();
+  } catch (e: any) {
+    console.log("error playing audio " + e.message); // will happen when user has not interacted with document (to be improved)
+  }
 };
 
 const getComponentContainer = () => {
@@ -110,7 +119,11 @@ window.onload = function () {
   init();
 };
 
-interface IGameInfo {
-  type?: string;
-  imageSrc?: string;
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker
+      .register("/serviceWorker.js")
+      .then((res) => console.log("service worker registered " + res?.scope))
+      .catch((err) => console.log("service worker not registered", err));
+  });
 }
