@@ -5,7 +5,7 @@ const assets = [
   "/",
   "/index.html",
   "/assets/index-D-VLIVcx.css",
-  "/assets/  index-DBsr2Z61.js",
+  "/assets/index-DBsr2Z61.js",
   "/handflute.m4a",
   "/laser.cur",
   "/img/almostEverybody.jpg",
@@ -22,7 +22,7 @@ const assets = [
   // same
   "index.html",
   "assets/index-D-VLIVcx.css",
-  "assets/  index-DBsr2Z61.js",
+  "assets/index-DBsr2Z61.js",
   "handflute.m4a",
   "laser.cur",
   "img/almostEverybody.jpg",
