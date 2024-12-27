@@ -16,6 +16,23 @@ const assets = [
   "/img/PawPatrol.jpg",
   "/img/Pepa.jpg",
   "/img/PepaReal.jpg",
+  // service worker  (probably not needed)
+  "/serviceWorker.js",
+  "serviceWorker.js",
+  // same
+  "index.html",
+  "assets/index-D-VLIVcx.css",
+  "assets/  index-DBsr2Z61.js",
+  "handflute.m4a",
+  "laser.cur",
+  "img/almostEverybody.jpg",
+  "img/birdSmaller.jpg",
+  "img/coolMan.jpg",
+  "img/LionSmaller.jpg",
+  "img/mexico.jpg",
+  "img/PawPatrol.jpg",
+  "img/Pepa.jpg",
+  "img/PepaReal.jpg",
 ];
 
 self.addEventListener("install", (installEvent) => {
