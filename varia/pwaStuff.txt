@@ -14,12 +14,15 @@ https://developer.mozilla.org/de/docs/Web/Manifest
 https://www.appicon.co/  -> to generate icons
 
 
-## service worker and typescript
+## service worker
 
-See: https://joshuatz.com/posts/2021/strongly-typed-service-workers/
+See: https://joshuatz.com/posts/2021/strongly-typed-service-workers/   (service worker and typescript)
 or see subfolder /pwaExampleCodeTS   
-
 -> as of now.. easier to just use js file (but we need to update its content each time :-()
+
+https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers  
+
+
 
 
 ## Other

@@ -18,7 +18,7 @@ export default class StackComponent extends BaseComponent {
 
   render = () => {
     return `
-        <div style="display:flex; flex-direction: roe; flex-wrap: wrap; gap: 50px;">
+        <div style="display:flex; flex-direction: row; flex-wrap: wrap; gap: 50px;">
           <slot></slot>
         </div>`;
   };
