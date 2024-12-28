@@ -13,7 +13,7 @@ const assets = [
   "/img/coolMan.jpg",
   "/img/LionSmaller.jpg",
   "/img/mexico.jpg",
-  "/img/PawPatrol.jpg",
+  "/img/PawPatrol.png",
   "/img/Pepa.jpg",
   "/img/PepaReal.jpg",
 
