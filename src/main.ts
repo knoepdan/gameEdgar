@@ -5,6 +5,8 @@ import StackComponent from "./stackComponent.js";
 interface IGameInfo {
   type?: string;
   imageSrc?: string;
+  soundSrc?: string;
+  soundSpeed?: number;
 }
 
 const init = () => {
@@ -16,16 +18,6 @@ const init = () => {
 
   const tiles = getGameTiles();
   document.getElementById("tile-container")?.append(...tiles);
-
-  // start audio (will only work if user interacts with the page.. so initially no music)
-  try {
-    const audio = document.getElementById("my-audio") as HTMLAudioElement;
-    audio.playbackRate = 2.0;
-    audio.muted = false;
-    audio.play();
-  } catch (e: any) {
-    console.log("error playing audio " + e.message); // will happen when user has not interacted with document (to be improved)
-  }
 };
 
 const getComponentContainer = () => {
@@ -41,7 +33,7 @@ const startGame = (tile?: TileComponent<IGameInfo>) => {
   );
   const componentContainer = getComponentContainer();
   if (tile?.data?.imageSrc) {
-    componentContainer.innerHTML = `<a-game name="${tile.name}" imageSrc="${tile.data.imageSrc}"></a-game>`;
+    componentContainer.innerHTML = `<a-game name="${tile.name}" imageSrc="${tile.data.imageSrc}" soundSrc="${tile.data.soundSrc}" soundSpeed="${tile.data.soundSpeed} ></a-game>`;
   }
 };
 
@@ -85,7 +77,7 @@ const getGameTiles = () => {
 
   tiles.push(
     new TileComponent<IGameInfo>("Die Familie", startGame, "green", "lime", {
-      imageSrc: "img/almostEverybody.jpg",
+      imageSrc: "img/almostEverybody.jpg", soundSrc: "sound/handflute.m4a", soundSpeed: 2.0
     })
   );
   tiles.push(
@@ -111,6 +103,13 @@ const getGameTiles = () => {
       imageSrc: "img/Pepa.jpg",
     })
   );
+
+  tiles.push(
+    new TileComponent<IGameInfo>("Gross und grau", startGame, "gray", "silver", {
+      imageSrc: "img/Ele.jpg", soundSrc: "sound/elephant.m4a"
+    })
+  );
+
 
   return tiles;
 };
