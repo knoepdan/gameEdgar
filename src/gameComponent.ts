@@ -27,6 +27,26 @@ export default class GameComponent extends BaseComponent {
     this.build();
   }
 
+  private _soundsrc = "";
+  get soundsrc(): string {
+    return this._soundsrc;
+  }
+  set soundsrc(value: string) {
+    this._soundsrc = value;
+    console.log("game: soundsrc set to: " + value);
+    this.build();
+  }
+
+  private _soundSpeed = 1.0;
+  get soundSpeed(): number {
+    return this._soundSpeed;
+  }
+  set soundSpeed(value: number) {
+    this._soundSpeed = value;
+    console.log("game: soundSpped set to: " + value);
+    this.build();
+  }
+
   build = () => {
     if (!this.myShadow) {
       console.log("game called without shadow " + this.imagesrc);
@@ -87,15 +107,45 @@ export default class GameComponent extends BaseComponent {
       console.log("backtile clicked");
       window.location.reload(); // for now enough
     };
+
+    this.playSound();
   };
   connectedCallback() {
     this.myShadow = this.attachShadow({ mode: "open" }); // closed means it cannot be accessed from the outside
     this.build();
   }
+
+
+  playSound = () => {
+    try {
+      const audio = document.getElementById("my-audio") as HTMLAudioElement;
+      if(!audio){
+        return;
+      }
+
+      audio.pause();
+      audio.muted = true;
+      audio.playbackRate = 1.0;
+
+      if(!this.soundsrc){
+        return;
+      }
+
+      audio.src = this.soundsrc;
+      if(this.soundSpeed){
+        audio.playbackRate = this.soundSpeed;
+      }
+      audio.muted = false;
+      audio.play();
+    } catch (e: any) {
+      console.log("error playing audio " + e.message); // will happen when user has not interacted with document (to be improved)
+    }
+  };
+  
   //#region static webcomponent methods
 
   static get observedAttributes() {
-    return [nameof<GameComponent>("name"), nameof<GameComponent>("imagesrc")];
+    return [nameof<GameComponent>("name"), nameof<GameComponent>("imagesrc"), nameof<GameComponent>("soundsrc")];
   }
 
   //#endregion
