@@ -1,0 +1,19 @@
+Links in article
+
+
+https://2024.stateofjs.com/en-US   (State of JS 2024)
+
+https://htmx.org/
+
+https://hotwired.dev/
+
+http://www.dotnetpro.de/SL2504-05SPADIY1   (View Transition)
+
+https://github.com/WebReflection/uhtml
+
+
+https://github.com/SirPepe/ornament
+
+https://esbuild.github.io/
+
+https://lit.dev/
