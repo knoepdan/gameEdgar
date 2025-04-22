@@ -1,0 +1,7 @@
+
+hot-reload for web-components: https://open-wc.org/docs/development/hot-module-replacement/   (to be tested)
+
+
+might be a good side anyway
+
+https://open-wc.org/
